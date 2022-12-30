@@ -1,0 +1,121 @@
+
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <title>小贾爱你</title>
+    <embed src="css/1.mp3" type="" hidden='true' autostart='true' loop='true'>
+	<meta name="description" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<!-- <bgsound src='css/1.mp3' loop="-1"></bgsound> -->
+	<!-- <embed class="videoPlay" src="css/1.mp3" type="video/mp4" autostart="true" /> -->
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+	<script type="text/javascript" src="js/snow.js"></script>
+</head> 
+
+<body>
+	<!-- <embed src="/mp3/wxnsh.mp3" width=170 height=25 loop="true" autostart="true"> -->
+	<audio id="audio" src="/mp3/wxnsh.mp3" controls="controls" autoplay="autoplay"></audio>
+	<script>
+	$(function(){
+		var audio = document.getElementById("audio");
+		audio.play();
+		$.fn.snow({ 
+			minSize:5,
+			maxSize:35, 
+			newOn:120
+		});
+	});
+	</script>
+    <audio style="width:0px;height:0px;" controls="controls" autoplay="autoplay" loop="loop" src="css/1.mp3" type="audio/mpeg"></audio>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/淼淼</span><br />
+        <span class="space"/><span class="comments">* 你来看看,我用这个方式记录下</span><br />
+        <span class="space"/><span class="comments">* 你觉得会不会很LOW哇 </span><br />
+        <span class="space"/><span class="comments">* 虽然我们都是程序员，但是一直都没有什么东西记录 </span><br />
+        <span class="space"/><span class="comments">* 切记:不要在这上面找BUG </span><br />
+        <span class="space"/><span class="comments">* 我不是一个很擅长表达言语的人。 </span><br />
+        <span class="space"/><span class="comments">* 但我希望未来都会有你在</span><br />
+        <span class="space"/><span class="comments">* 快乐有很多种，见到你是第一种。</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				<span class="space"/><span class="comments">Mi Manchi</span><br />
+				<span class="space"/><span class="comments">You are mine</span><br />
+				<span class="comments">// 也许我们不是最合适的人，</span><br />
+				<span class="comments">// 但愿我们可以互相奔赴，成为彼此心中最完美的人</span><br />
+  			               <span class="comments">// 顺利的话，我们会结婚，会去看海，会去看日落。</span><br />
+				<span class="comments">// 如果不顺利的话，那我们就晚点。</span><br />
+				<span class="comments">// 对我来说你很重要，我不怎么会说甜言蜜语，但是。</span><br />
+				博哥爱你<br />
+				<span class="comments">// 愿我如星君如月,夜夜流光相皎洁 </span><br />
+				<span class="comments">// 你在我心中最美。 </span><br />
+				// 快来KissKiss <br />
+				<span class="comments">// 所以我有信心。</span><br />
+				<span class="comments">// 我会在你身边</span><br />
+				<span class="comments">// 一直稀罕你 </span><br />
+				<span class="comments">// 我有一颗永远不变的心，</span><br />
+				<span class="comments">// 我认为我和你在一起是我最开心的时候</span><br />
+				<span class="comments">// 不管世事如何沧桑，永远守在你身旁。</span><br />
+				<span class="placeholder">爱你 = 想你</span><br />
+				<span class="keyword">我非常高兴能此生遇见了你</span><br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						        三水宝宝，我们已经相遇了：
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						<div class="signature">--博哥</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript"> 
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2022, 8, 5);
+		together.setHours(00);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+		
+	</script>
+</body>
+</html>
